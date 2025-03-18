@@ -26,3 +26,17 @@ D:\Gabs e Rafa - 2º DS\DS\Aula03Colecoes\obj\Debug\net9.0\refint\Aula03Colecoes
 D:\Gabs e Rafa - 2º DS\DS\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.pdb
 D:\Gabs e Rafa - 2º DS\DS\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.genruntimeconfig.cache
 D:\Gabs e Rafa - 2º DS\DS\Aula03Colecoes\obj\Debug\net9.0\ref\Aula03Colecoes.dll
+D:\Usuário\DS\2º DS\DS\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usuário\DS\2º DS\DS\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.AssemblyInfoInputs.cache
+D:\Usuário\DS\2º DS\DS\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.AssemblyInfo.cs
+D:\Usuário\DS\2º DS\DS\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.csproj.CoreCompileInputs.cache
+D:\Usuário\DS\2º DS\DS\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.dll
+D:\Usuário\DS\2º DS\DS\Aula03Colecoes\obj\Debug\net9.0\refint\Aula03Colecoes.dll
+D:\Usuário\DS\2º DS\DS\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.pdb
+D:\Usuário\DS\2º DS\DS\Aula03Colecoes\bin\Debug\net9.0\Aula03Colecoes.exe
+D:\Usuário\DS\2º DS\DS\Aula03Colecoes\bin\Debug\net9.0\Aula03Colecoes.deps.json
+D:\Usuário\DS\2º DS\DS\Aula03Colecoes\bin\Debug\net9.0\Aula03Colecoes.runtimeconfig.json
+D:\Usuário\DS\2º DS\DS\Aula03Colecoes\bin\Debug\net9.0\Aula03Colecoes.dll
+D:\Usuário\DS\2º DS\DS\Aula03Colecoes\bin\Debug\net9.0\Aula03Colecoes.pdb
+D:\Usuário\DS\2º DS\DS\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.genruntimeconfig.cache
+D:\Usuário\DS\2º DS\DS\Aula03Colecoes\obj\Debug\net9.0\ref\Aula03Colecoes.dll

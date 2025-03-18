@@ -10,14 +10,14 @@ namespace Aula03Colecoes
 
         static void Main(string[] args)
         {
-            //CriarLista();
-            ExemplosListasColecoes();
-            //ObterPorNome();
-            //ObterFuncionarioRecentes();
-            //ObterEstatisticas();
-            //ValidarSalarioAdmissao();
-            //ValidarNome();
-            //ObterPorTipo();
+            CriarLista();
+            //ExemplosListasColecoes();
+            ObterPorNome();
+            ObterFuncionariosRecentes();
+            ObterEstatisticas();
+            ValidarSalarioAdmissao();
+            ValidarNome();
+            ObterPorTipo();
         }
 
         public static void ExemplosListasColecoes()
@@ -220,7 +220,8 @@ namespace Aula03Colecoes
 
         public static void ObterPorId()
         {
-            //lista = lista.FindAll(x => x.Id == 1); 
+            //lista = lista.FindAll(x => x.Id == 1);
+            Console.WriteLine("Digite o ID:");
             lista = lista.FindAll(x => x.Id > 4);
             ExibirLista();
         }
@@ -289,7 +290,9 @@ namespace Aula03Colecoes
         digitado e que caso não encontre retorne uma mensagem para o usuário.*/
         public static void ObterPorNome()
         {
+            Console.WriteLine("==================================================");
             
+            Console.WriteLine("Digite um Nome: ");
             String Nome = Console.ReadLine();
 
 
@@ -305,6 +308,8 @@ namespace Aula03Colecoes
             {
                 Console.WriteLine("Funcionário não existe.");
             }  
+
+            Console.WriteLine("==================================================");
         }
 
         
@@ -314,7 +319,11 @@ namespace Aula03Colecoes
 
         public static void ObterFuncionariosRecentes()
         {
-            lista.RemoveAll(f => f.Id < 4);
+            Console.WriteLine("==================================================");
+            
+            Console.WriteLine("Digite 1 para exibir os funcionários recentes:");
+            string comando = Console.ReadLine();
+            lista.RemoveAll(f => f.Id < 1);
             var funcionariosOrdenados = lista.OrderByDescending(f => f.Salario).ToList();
 
             Console.WriteLine("Funcionários recentes em ordem decrescente de salário:");
@@ -322,6 +331,8 @@ namespace Aula03Colecoes
             {
                 Console.WriteLine($"{f.Nome} - {f.Salario}");
             }
+
+            Console.WriteLine("==================================================");
         }
 
 
@@ -330,11 +341,16 @@ namespace Aula03Colecoes
 
         public static void ObterEstatisticas()
         {
+            Console.WriteLine("==================================================");
+            Console.WriteLine("Estátisticas: ");
+
             int quantidade = lista.Count;
             decimal somatorioSalario = lista.Sum(f => f.Salario);
 
             Console.WriteLine($"Quantidade de funcionários: {quantidade}");
             Console.WriteLine($"Somatório dos salários: {somatorioSalario}");
+
+            Console.WriteLine("==================================================");
         }
 
 
@@ -342,8 +358,33 @@ namespace Aula03Colecoes
         salário 0 ou data de admissão anterior a data atual. Deve ser exibida uma mensagem ao usuário caso isso aconteça.*/
         public static void ValidarSalarioAdmissao()
         {
+            Console.WriteLine("==================================================");
+            
             Console.WriteLine("Digite o salário do funcionário: ");
-            decimal Salario = decimal.Parse(Console.ReadLine());
+            if (!decimal.TryParse(Console.ReadLine(), out decimal Salario) || Salario <= 0)
+            {
+                Console.WriteLine("Erro: O salário não pode ser 0 ou negativo.");
+            }
+            else
+            {
+        
+                Console.WriteLine("Digite a data de admissão do funcionário (formato: dd/MM/yyyy): ");
+                if (!DateTime.TryParseExact(Console.ReadLine(), "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime DataAdmissao))
+                {
+                    Console.WriteLine("Erro: Data de admissão inválida. Por favor, use o formato dd/MM/yyyy.");
+                }
+                else if (DataAdmissao > DateTime.Now)
+                {
+                    Console.WriteLine("Erro: A data de admissão não pode ser no futuro.");
+                }
+                else
+                {
+                    Console.WriteLine("Funcionário válido para admissão.");
+                }
+            }
+        }
+
+            /*decimal Salario = decimal.Parse(Console.ReadLine());
 
             Console.WriteLine("Digite a data de adimissão do funcionário: ");
             DateTime DataAdmissao = DateTime.Parse(Console.ReadLine());
@@ -360,14 +401,18 @@ namespace Aula03Colecoes
             {
                 Console.WriteLine("Funcionário válido para admissão.");
             }
-        }
+
+            Console.WriteLine("==================================================");*/
+        
 
 
         /*E - Método com nome ValidarNome que não permita que um funcionário tenha nome menor que 2 caracteres.
         Deve ser exibida uma mensagem ao usuário caso isso aconteça.*/
         public static void ValidarNome()
         {
-            Console.WriteLine("Digite o nome do funcionário: ")
+            Console.WriteLine("=================================================="); 
+
+            Console.WriteLine("Digite o nome do funcionário: ");
              string nome = Console.ReadLine();
 
              if (string.IsNullOrEmpty(nome) || nome.Length < 2)
@@ -378,12 +423,16 @@ namespace Aula03Colecoes
             {
                 Console.WriteLine("Nome do funcionário válido.");
             }
+
+            Console.WriteLine("==================================================");
         }
 
 
         /*F - Método com nome ObterPorTipo que selecione a lista de funcionários de acordo com numeração digitada no console.*/
         public static void ObterPorTipo()
         {
+            Console.WriteLine("==================================================");
+
             Console.WriteLine("Digite o tipo de funcionário: ");
             Console.WriteLine("1 - CLT");
             Console.WriteLine("2 - Aprendiz");
@@ -419,6 +468,8 @@ namespace Aula03Colecoes
             {
                 Console.WriteLine("Nenhum funcionário encontrado para o tipo informado.");
             }
+
+            Console.WriteLine("==================================================");
 
         }
 
